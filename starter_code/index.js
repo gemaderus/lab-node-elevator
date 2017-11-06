@@ -4,4 +4,8 @@ const Person = require('./person.js');
 let elevator = new Elevator ();
 elevator.update();
 elevator.start();
-setTimeout(() => elevator.stop(), 4000);
+
+setTimeout(() => elevator.stop(), 11000);
+
+
+// elevator.floorDown();

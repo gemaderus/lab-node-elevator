@@ -8,8 +8,10 @@ class Elevator {
   }
 
   start() {
-    this.interval = setInterval(()=> this.update(), 1000);
-
+    this.interval = setInterval(()=> {this.floorDown(),
+                                      this.update()
+                                    },
+                                      1000);
   }
 
   stop() {
@@ -24,11 +26,21 @@ class Elevator {
   _passengersLeave() {
   }
   floorUp() {
-    this.floor += 1;
+    if(this.floor === this.MAXFLOOR) {
+      this.floor = this.MAXFLOOR;
+    } else {
+      return this.floor += 1;
+    }
   }
+
   floorDown() {
-    this.floor -= 1;
+    if(this.floor === 0) {
+      this.floor = 0;
+    } else {
+      return this.floor -= 1;
+    }
   }
+
   call() {
   }
   log() {
