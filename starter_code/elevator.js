@@ -24,9 +24,10 @@ class Elevator {
   _passengersLeave() {
   }
   floorUp() {
-
+    this.floor += 1;
   }
   floorDown() {
+    this.floor -= 1;
   }
   call() {
   }
