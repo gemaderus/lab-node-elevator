@@ -5,12 +5,6 @@ let elevator = new Elevator ();
 elevator.update();
 elevator.start();
 
-setTimeout(() => elevator.stop(), 11000);
-
-var e = new Elevator();
-
-elevator.start();
-
 elevator.call(new Person("Gema", 5 , 10));
 elevator.call(new Person("Nadia", 2 , 3));
 elevator.call(new Person("Miguel", 6 , 7));
